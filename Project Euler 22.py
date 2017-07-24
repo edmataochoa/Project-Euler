@@ -24,11 +24,6 @@ def convert_to_num(lst):
         for character in name:
             sum_name += numerical_value(character)
         scores_sum += rank * sum_name
-        if name == "COLIN":
-            print("COLIN")
-            print("rank = ", rank)
-            print("sum_name = ", sum_name)
-            print("sum = ", rank * sum_name)
         sum_name = 0
         rank += 1
     return scores_sum
