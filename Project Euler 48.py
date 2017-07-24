@@ -1,7 +1,7 @@
 def add_powers(max_num):
     sum_powers = 0
     for n in range(1, max_num + 1):
-        sum_powers += (n ** n)
+        sum_powers += n ** n
     return sum_powers
 
 def last_digits(number, num_of_digits):
