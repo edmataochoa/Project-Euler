@@ -1,24 +1,28 @@
 numbers = open("p008_numbers.txt", "r").read()
 
-def multiply_quantity(number):
-    list_numbers = [int(n) for n in number if n.isdigit()]
+def get_numbers(numbers, amount):
+    # list_numbers = [int(n) for n in numbers if n.isdigit()]
+    list_numbers = [1, 2, 3]
 
-    def get_numbers(num_of_digits):
-        count = 0
-        total = 0
-        current_num = 0
-        for n in list_numbers:
-            while count < num_of_digits:
-                total *= n
-                count += 1
-            if total > current_num:
-                current_num = total
-            count = 0
-            total = 0
-        return current_num
+    highest_total = 0
+    current_product = 0
+    for n in list_numbers:
+        current_product = n
+        for m in range(1, amount + 1):
+            # print("n = ", n)
+            # print("list_numbers.index(n) = ", list_numbers.index(n))
+            # print("amount = ", amount)
+            print("n = ", n)
+            print("m = ", m)
+            print(list_numbers[list_numbers.index(n) + m])
+            # print("list_numbers.index(n) + amount = ", list_numbers.index(n) + amount)
+            if 
+                test_var = list_numbers[list_numbers(list_numbers.index(n) + amount)]
 
-    return get_numbers
+        # print(current_product)
+        if current_product > highest_total:
+            highest_total = current_product
 
+    return highest_total
 
-multilply_numbers = multiply_quantity(numbers)
-print(multilply_numbers(4))
+print(get_numbers(numbers, 2))
