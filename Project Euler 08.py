@@ -1,28 +1,19 @@
 numbers = open("p008_numbers.txt", "r").read()
 
-def get_numbers(numbers, amount):
-    # list_numbers = [int(n) for n in numbers if n.isdigit()]
-    list_numbers = [1, 2, 3]
+list_of_numbers = [int(n) for n in numbers if n.isdigit()]
 
-    highest_total = 0
-    current_product = 0
-    for n in list_numbers:
-        current_product = n
-        for m in range(1, amount + 1):
-            # print("n = ", n)
-            # print("list_numbers.index(n) = ", list_numbers.index(n))
-            # print("amount = ", amount)
-            print("n = ", n)
-            print("m = ", m)
-            print(list_numbers[list_numbers.index(n) + m])
-            # print("list_numbers.index(n) + amount = ", list_numbers.index(n) + amount)
-            if 
-                test_var = list_numbers[list_numbers(list_numbers.index(n) + amount)]
+def get_amount_num(highest_product, amount, num_list):
 
-        # print(current_product)
-        if current_product > highest_total:
-            highest_total = current_product
+    if len(num_list) < amount:
+        return highest_product
 
-    return highest_total
+    product = 1
+    for n in range(amount):
+        product *= num_list[n]
 
-print(get_numbers(numbers, 2))
+    if product > highest_product:
+        highest_product = product
+
+    return get_amount_num(highest_product, amount, num_list[1:])
+
+print(get_amount_num(0, 13, list_of_numbers))
